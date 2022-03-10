@@ -11,8 +11,9 @@
         <!--Navigation Controller-->
         <scene sceneID="G6B-Hs-Ksv">
             <objects>
-                <navigationController navigationBarHidden="YES" id="Z3R-ah-T0W" sceneMemberID="viewController">
+                <navigationController id="Z3R-ah-T0W" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9my-AK-P4O">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -34,18 +35,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wEu-VM-e7Y">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hgy-s9-fgh">
-                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hgy-s9-fgh">
+                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD0-mq-D07">
-                                <rect key="frame" x="340" y="26" width="42" height="38"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
-                                <connections>
-                                    <action selector="actionAddCity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7P-cr-StO"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="c5s-ER-lfL">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
@@ -69,13 +64,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hgy-s9-fgh" firstAttribute="top" secondItem="mD0-mq-D07" secondAttribute="bottom" id="1zo-gK-yhM"/>
                             <constraint firstItem="hgy-s9-fgh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AIq-1A-hXf"/>
                             <constraint firstItem="yKT-g2-cmS" firstAttribute="top" secondItem="Apz-op-DJZ" secondAttribute="bottom" constant="30" id="Jm3-Yg-itl"/>
-                            <constraint firstItem="mD0-mq-D07" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="26" id="L4K-of-xPz"/>
                             <constraint firstItem="hgy-s9-fgh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ny0-bm-z43"/>
                             <constraint firstItem="wEu-VM-e7Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QZI-fy-nDL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mD0-mq-D07" secondAttribute="trailing" constant="32" id="QqZ-MY-wLf"/>
                             <constraint firstItem="yKT-g2-cmS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQw-Di-rpg"/>
                             <constraint firstItem="c5s-ER-lfL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VBH-bN-0Iu"/>
                             <constraint firstItem="Apz-op-DJZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vdq-Ni-1FU"/>
@@ -90,6 +82,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="GOW-LA-Q1u">
                         <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ThF-hf-muV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mD0-mq-D07">
+                                <rect key="frame" x="348.5" y="1.5" width="45.5" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="actionAddCity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7P-cr-StO"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicatorView" destination="c5s-ER-lfL" id="O0q-3l-4ek"/>

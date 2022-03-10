@@ -27,12 +27,12 @@ class SearcherViewController: UIViewController, UISearchResultsUpdating, UISearc
         let city = searchBar.text ?? ""
         if let controller = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController {
             controller.currentCity = city
-            controller.locationCity(searchSity: city)
+            controller.searchCity(searchSity: city)
             navigationController?.pushViewController(controller, animated: true)
         }
     }
     
     @IBAction func goBackToMainScreen(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+
     }
 }

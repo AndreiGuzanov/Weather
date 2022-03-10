@@ -51,7 +51,7 @@ class DayOfTheWeekDataViewController: UIViewController {
     }
     
     @IBAction func goBackToMainScreen(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        
     }
     func setupModelDay(dateName: String, tempDay: String, tempNight: String, icon: UIImage, descriptionWeather: String, feelsLike: String, indexUv: String, windSpeed: String, humidity: String) {
         dateNameLabel = dateName

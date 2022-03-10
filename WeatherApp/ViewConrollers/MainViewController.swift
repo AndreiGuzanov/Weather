@@ -73,7 +73,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate  {
     
     // MARK: - API
     
-    func locationCity(searchSity: String) {
+    func searchCity(searchSity: String) {
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(searchSity) {[weak self] (placemarks, error) in
             if let error = error {
