@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import SpriteKit
 
 
 class MainViewController: UIViewController, CLLocationManagerDelegate  {
@@ -17,6 +18,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate  {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var reloadButton: UIButton!
     
+    let node = SKEmitterNode()
     var currentLocation: CLLocation?
     var currentCity = ""
     var model: WeatherResponse?
