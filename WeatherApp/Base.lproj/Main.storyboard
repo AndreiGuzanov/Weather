@@ -32,9 +32,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wEu-VM-e7Y">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJQ-9u-jfa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </skView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hgy-s9-fgh">
                                 <rect key="frame" x="0.0" y="108" width="414" height="754"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,19 +64,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PJQ-9u-jfa" secondAttribute="bottom" id="6p0-l2-PYa"/>
+                            <constraint firstAttribute="trailing" secondItem="PJQ-9u-jfa" secondAttribute="trailing" id="AFs-hu-yPA"/>
                             <constraint firstItem="hgy-s9-fgh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AIq-1A-hXf"/>
                             <constraint firstItem="yKT-g2-cmS" firstAttribute="top" secondItem="Apz-op-DJZ" secondAttribute="bottom" constant="30" id="Jm3-Yg-itl"/>
                             <constraint firstItem="hgy-s9-fgh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ny0-bm-z43"/>
-                            <constraint firstItem="wEu-VM-e7Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QZI-fy-nDL"/>
                             <constraint firstItem="yKT-g2-cmS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQw-Di-rpg"/>
+                            <constraint firstItem="PJQ-9u-jfa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SkQ-iK-d8q"/>
                             <constraint firstItem="c5s-ER-lfL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VBH-bN-0Iu"/>
                             <constraint firstItem="Apz-op-DJZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vdq-Ni-1FU"/>
-                            <constraint firstAttribute="bottom" secondItem="wEu-VM-e7Y" secondAttribute="bottom" id="WFT-jU-3OA"/>
                             <constraint firstItem="c5s-ER-lfL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Whb-nN-df8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wEu-VM-e7Y" secondAttribute="trailing" id="eOo-a4-gUd"/>
+                            <constraint firstItem="PJQ-9u-jfa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hHO-jP-xrP"/>
                             <constraint firstItem="hgy-s9-fgh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mat-KB-1Sq"/>
                             <constraint firstItem="Apz-op-DJZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uCt-ND-2YV"/>
-                            <constraint firstItem="wEu-VM-e7Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vhk-8k-IbV"/>
                             <constraint firstItem="hgy-s9-fgh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zHS-Xq-tDH"/>
                         </constraints>
                     </view>
@@ -97,7 +97,7 @@
                         <outlet property="activityIndicatorView" destination="c5s-ER-lfL" id="O0q-3l-4ek"/>
                         <outlet property="errorLabel" destination="Apz-op-DJZ" id="C1K-X1-lmG"/>
                         <outlet property="reloadButton" destination="yKT-g2-cmS" id="nfg-oe-sTH"/>
-                        <outlet property="screenView" destination="wEu-VM-e7Y" id="Khs-LJ-onC"/>
+                        <outlet property="sceneView" destination="PJQ-9u-jfa" id="Tlg-Wc-55Z"/>
                         <outlet property="tableView" destination="hgy-s9-fgh" id="s2m-K2-dH7"/>
                     </connections>
                 </viewController>

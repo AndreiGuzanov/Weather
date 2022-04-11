@@ -12,7 +12,7 @@ import SpriteKit
 
 class MainViewController: UIViewController, CLLocationManagerDelegate  {
     
-    @IBOutlet weak var screenView: UIImageView!
+    @IBOutlet weak var sceneView: SKView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var errorLabel: UILabel!
@@ -32,16 +32,14 @@ class MainViewController: UIViewController, CLLocationManagerDelegate  {
         configTableView()
     }
     
-    // MARK: - BackgroundScreenViewController
+    // MARK: - BackgroundSceneViewController
     
-    func backgroundColorScreenController() {
+    func backgroundSceneViewController() {
         let iconName = model?.current.weather.first?.icon
-        for icon in iconDic.iconsDictionary {
-            if icon.key == iconName {
-                let nameImage = UIImage(named: icon.value)
-                screenView.image = nameImage
-                screenView.frame = CGRect.init(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-                screenView.contentMode = .scaleAspectFill
+        for scene in iconDic.iconsDictionary {
+            if scene.key == iconName {
+                let sceneName = SKScene(fileNamed: scene.value)
+                sceneView.presentScene(sceneName)
             }
         }
     }
