@@ -45,8 +45,7 @@ class CloudySkyDay: SKScene {
         sunSpriteNode.size = CGSize(width: 200, height: 200)
         sunSpriteNode.anchorPoint = CGPoint(x: 0, y: 0)
         sunSpriteNode.position = CGPoint(x: size.width / 2,
-                                         y: size.height - sunSpriteNode.size.height
-        )
+                                         y: size.height - sunSpriteNode.size.height)
         sunSpriteNode.zPosition = -1
         sunNode.addChild(sunSpriteNode)
     }
@@ -62,7 +61,8 @@ class CloudySkyDay: SKScene {
                                              y: frame.maxY - skySpriteNode.size.height),
                                  duration: 40)
         let repeatMove = SKAction.moveBy(x: frame.width + skySpriteNode.size.width,
-                                         y: 0, duration: 0)
+                                         y: 0,
+                                         duration: 0)
         let moveForever = SKAction.repeatForever(SKAction.sequence([move, repeatMove]))
         skySpriteNode.zPosition = 1
         skySpriteNode.run(moveForever)
@@ -79,7 +79,8 @@ class CloudySkyDay: SKScene {
         let move = SKAction.move(to: CGPoint(x: frame.minX - liteSkySpriteNode.size.width,
                                              y: frame.maxY - liteSkySpriteNode.size.height), duration: 60)
         let repeatMove = SKAction.moveBy(x: frame.width + liteSkySpriteNode.size.width,
-                                         y: 0, duration: 0)
+                                         y: 0,
+                                         duration: 0)
         let moveForever = SKAction.repeatForever(SKAction.sequence([move, repeatMove]))
         liteSkySpriteNode.zPosition = 0
         liteSkySpriteNode.run(moveForever)

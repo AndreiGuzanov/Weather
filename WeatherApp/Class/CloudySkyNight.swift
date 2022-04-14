@@ -58,13 +58,13 @@ class CloudySkyNight: SKScene {
         skySpriteNode.size = CGSize(width: 300, height: 200)
         skySpriteNode.anchorPoint = CGPoint(x: 0, y: 0)
         skySpriteNode.position = CGPoint(x: UIScreen.main.bounds.width,
-                                         y: UIScreen.main.bounds.height - skySpriteNode.size.height
-        )
+                                         y: UIScreen.main.bounds.height - skySpriteNode.size.height)
         let move = SKAction.move(to: CGPoint(x: frame.minX - skySpriteNode.size.width,
                                              y: frame.maxY - skySpriteNode.size.height),
                                  duration: 40)
         let repeatMove = SKAction.moveBy(x: frame.width + skySpriteNode.size.width,
-                                         y: 0, duration: 0)
+                                         y: 0,
+                                         duration: 0)
         let moveForever = SKAction.repeatForever(SKAction.sequence([move, repeatMove]))
         skySpriteNode.zPosition = 1
         skySpriteNode.run(moveForever)
@@ -77,13 +77,13 @@ class CloudySkyNight: SKScene {
         liteSkySpriteNode.size = CGSize(width: 300, height: 200)
         liteSkySpriteNode.anchorPoint = CGPoint(x: 0, y: 0)
         liteSkySpriteNode.position = CGPoint(x: UIScreen.main.bounds.width / 2,
-                                             y: UIScreen.main.bounds.height - liteSkySpriteNode.size.height
-        )
+                                             y: UIScreen.main.bounds.height - liteSkySpriteNode.size.height)
         let move = SKAction.move(to: CGPoint(x: frame.minX - liteSkySpriteNode.size.width,
                                              y: frame.maxY - liteSkySpriteNode.size.height),
                                  duration: 60)
         let repeatMove = SKAction.moveBy(x: frame.width + liteSkySpriteNode.size.width,
-                                         y: 0, duration: 0)
+                                         y: 0,
+                                         duration: 0)
         let moveForever = SKAction.repeatForever(SKAction.sequence([move, repeatMove]))
         liteSkySpriteNode.zPosition = 0
         liteSkySpriteNode.run(moveForever)

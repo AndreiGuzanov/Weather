@@ -36,7 +36,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             case 0:
                 switch indexPath.row {
                 case 0:
-                    backgroundColorScreenController()
+                    backgroundSceneViewController()
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentWeatherTableViewCell.identifierCurrentWeatherTableViewCel, for: indexPath) as? CurrentWeatherTableViewCell else { return UITableViewCell() }
                     cell.backgroundColor = .clear
                     cell.cityName.text = city()
