@@ -30,7 +30,7 @@ class CloudySkyDay: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = .systemBlue
+        backgroundColor = UIColor(red: 85/255, green: 72/255, blue: 232/255, alpha: 1)
     }
     
     private func createObject() {
@@ -42,7 +42,7 @@ class CloudySkyDay: SKScene {
     private func createSun() {
         sunTexture = SKTexture(imageNamed: "Sun")
         sunSpriteNode = SKSpriteNode(texture: sunTexture)
-        sunSpriteNode.size = CGSize(width: 200, height: 200)
+        sunSpriteNode.size = CGSize(width: 100, height: 100)
         sunSpriteNode.anchorPoint = CGPoint(x: 0, y: 0)
         sunSpriteNode.position = CGPoint(x: size.width / 2,
                                          y: size.height - sunSpriteNode.size.height)

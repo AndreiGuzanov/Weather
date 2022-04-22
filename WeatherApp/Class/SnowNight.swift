@@ -21,7 +21,7 @@ class SnowNight: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = .black
+        backgroundColor = UIColor(red: 52/255, green: 46/255, blue: 87/255, alpha: 1)
     }
     
     private func createClouds() {

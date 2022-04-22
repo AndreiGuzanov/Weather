@@ -28,7 +28,7 @@ class ClearSkyNight: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = .black
+        backgroundColor = UIColor(red: 20/255, green: 13/255, blue: 64/255, alpha: 1)
     }
     
     private func createStarrySky() {

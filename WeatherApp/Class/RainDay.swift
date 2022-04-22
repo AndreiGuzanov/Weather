@@ -21,7 +21,7 @@ class RainDay: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = .systemBlue
+        backgroundColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1)
     }
     
     private func createClouds() {

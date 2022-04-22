@@ -25,13 +25,13 @@ class ClearSkyDay: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = .systemBlue
+        backgroundColor = UIColor(red: 85/255, green: 72/255, blue: 232/255, alpha: 1)
     }
     
     private func createMoon() {
         sunTexture = SKTexture(imageNamed: "Sun")
         sunSpriteNode = SKSpriteNode(texture: sunTexture)
-        sunSpriteNode.size = CGSize(width: 200, height: 200)
+        sunSpriteNode.size = CGSize(width: 100, height: 100)
         sunSpriteNode.anchorPoint = CGPoint(x: 0, y: 0)
         sunSpriteNode.position = CGPoint(x: UIScreen.main.bounds.width / 2,
                                          y: UIScreen.main.bounds.height - sunSpriteNode.size.height)

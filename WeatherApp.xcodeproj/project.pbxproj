@@ -61,9 +61,9 @@
 		2DC774642804370A005C9078 /* Mist.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7746328043709005C9078 /* Mist.sks */; };
 		2DC7746628049120005C9078 /* Сlouds.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7746528049120005C9078 /* Сlouds.sks */; };
 		2DC7746828049482005C9078 /* StarrySky.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7746728049482005C9078 /* StarrySky.sks */; };
-		2DC7746A280494A1005C9078 /* Thunderstorm.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2DC77469280494A1005C9078 /* Thunderstorm.sks */; };
 		2DC7746C280494AF005C9078 /* Mist2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7746B280494AF005C9078 /* Mist2.sks */; };
 		2DD04CA027C27FA400DB948B /* ModelDayOfTheWeekDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD04C9F27C27FA400DB948B /* ModelDayOfTheWeekDataTableViewCell.xib */; };
+		2FC8A76E28128DD400BC4C66 /* Thunderstorm.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2FC8A76D28128DD400BC4C66 /* Thunderstorm.sks */; };
 		BB195F53F6F8F5B3EAAA359F /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0D0FD83463745490ACD5CA /* Pods_WeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,9 +124,9 @@
 		2DC7746328043709005C9078 /* Mist.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Mist.sks; sourceTree = "<group>"; };
 		2DC7746528049120005C9078 /* Сlouds.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Сlouds.sks"; sourceTree = "<group>"; };
 		2DC7746728049482005C9078 /* StarrySky.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarrySky.sks; sourceTree = "<group>"; };
-		2DC77469280494A1005C9078 /* Thunderstorm.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Thunderstorm.sks; sourceTree = "<group>"; };
 		2DC7746B280494AF005C9078 /* Mist2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Mist2.sks; sourceTree = "<group>"; };
 		2DD04C9F27C27FA400DB948B /* ModelDayOfTheWeekDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelDayOfTheWeekDataTableViewCell.xib; sourceTree = "<group>"; };
+		2FC8A76D28128DD400BC4C66 /* Thunderstorm.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Thunderstorm.sks; sourceTree = "<group>"; };
 		54AB64AAD953E1A1B34821DA /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A15C7B582B1D2EFF846F09DC /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		DF0D0FD83463745490ACD5CA /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,8 +325,8 @@
 				2D9B375E27EE10C500ADA68C /* Rain.sks */,
 				2DC7746528049120005C9078 /* Сlouds.sks */,
 				2DC7746728049482005C9078 /* StarrySky.sks */,
-				2DC77469280494A1005C9078 /* Thunderstorm.sks */,
 				2DC7746B280494AF005C9078 /* Mist2.sks */,
+				2FC8A76D28128DD400BC4C66 /* Thunderstorm.sks */,
 			);
 			name = Particle;
 			sourceTree = "<group>";
@@ -402,6 +402,7 @@
 			files = (
 				2DC774502804336D005C9078 /* RainNight.sks in Resources */,
 				2DC7744428042EF9005C9078 /* ClearSkyDay.sks in Resources */,
+				2FC8A76E28128DD400BC4C66 /* Thunderstorm.sks in Resources */,
 				2DC7744C28043285005C9078 /* RainDay.sks in Resources */,
 				2DC774642804370A005C9078 /* Mist.sks in Resources */,
 				2DC7746C280494AF005C9078 /* Mist2.sks in Resources */,
@@ -415,7 +416,6 @@
 				2DC7744028042DA7005C9078 /* CloudySkyNight.sks in Resources */,
 				2D31A9162758E41B003DA1AD /* Assets.xcassets in Resources */,
 				2D3D08CF275D1B0B000EBD2C /* CurrentWeatherTableViewCell.xib in Resources */,
-				2DC7746A280494A1005C9078 /* Thunderstorm.sks in Resources */,
 				2DC7745428043432005C9078 /* ThunderstormDay.sks in Resources */,
 				2DC7746028043673005C9078 /* SnowNight.sks in Resources */,
 				2D163B3C27BBF2EA002EDACD /* CurrentWeatherParametersTableViewCell.xib in Resources */,

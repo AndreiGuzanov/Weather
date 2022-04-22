@@ -21,7 +21,7 @@ class ThunderstormDay: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = .systemBlue
+        backgroundColor = UIColor(red: 49/255, green: 48/255, blue: 54/255, alpha: 1)
     }
     
     private func createClouds() {
@@ -36,7 +36,8 @@ class ThunderstormDay: SKScene {
     private func createThunderstorm() {
         thunderstorm = SKEmitterNode(fileNamed: "Thunderstorm.sks") ?? SKEmitterNode()
         thunderstorm.zPosition = 1
-        thunderstorm.particlePositionRange = CGVector(dx: 1000, dy: 210)
+        thunderstorm.particleSize = CGSize(width: frame.width,
+                                     height: 150)
         thunderstorm.particlePosition = CGPoint(x: UIScreen.main.bounds.width / 2,
                                                 y: UIScreen.main.bounds.height - thunderstorm.frame.size.height)
         addChild(thunderstorm)

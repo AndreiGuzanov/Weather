@@ -32,7 +32,7 @@ class CloudySkyNight: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = .black
+        backgroundColor = UIColor(red: 20/255, green: 13/255, blue: 64/255, alpha: 1)
     }
     
     private func createObject() {
@@ -44,7 +44,7 @@ class CloudySkyNight: SKScene {
     private func createMoon() {
         moonTexture = SKTexture(imageNamed: "moon")
         moonSpriteNode = SKSpriteNode(texture: moonTexture)
-        moonSpriteNode.size = CGSize(width: 200, height: 200)
+        moonSpriteNode.size = CGSize(width: 100, height: 100)
         moonSpriteNode.anchorPoint = CGPoint(x: 0, y: 0)
         moonSpriteNode.position = CGPoint(x: UIScreen.main.bounds.width / 2,
                                           y: UIScreen.main.bounds.height - moonSpriteNode.size.height)

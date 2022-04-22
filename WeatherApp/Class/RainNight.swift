@@ -21,7 +21,7 @@ class RainSceneNight: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = .black
+        backgroundColor = UIColor(red: 35/255, green: 35/255, blue: 35/255, alpha: 1)
     }
     
     private func createClouds() {
