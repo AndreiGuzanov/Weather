@@ -16,8 +16,8 @@ class IconModel {
         "02n" : "CloudySkyNight",
         "03d" : "CloudySkyDay",
         "03n" : "CloudySkyNight",
-        "04d" : "CloudySkyDay",
-        "04n" : "CloudySkyNight",
+        "04d" : "BrokenClouds",
+        "04n" : "BrokenClouds",
         "09d" : "RainDay",
         "09n" : "RainNight",
         "10d" : "RainDay",
@@ -30,25 +30,3 @@ class IconModel {
         "50n" : "Mist"
     ]
 }
-//class IconModel {
-//    let iconsDictionary = [
-//        "01d" : "clearSkyDay",
-//        "01n" : "clearSkyNight",
-//        "02d" : "fewCloudsDay",
-//        "02n" : "fewCloudsNight",
-//        "03d" : "scatteredCloudsDay",
-//        "03n" : "scatteredCloudsNight",
-//        "04d" : "scatteredCloudsDay",
-//        "04n" : "scatteredCloudsNight",
-//        "09d" : "rainDay",
-//        "09n" : "rainNight",
-//        "10d" : "rainDay",
-//        "10n" : "rainNight",
-//        "11d" : "thunderstormDay",
-//        "11n" : "thunderstormNight",
-//        "13d" : "snowDay",
-//        "13n" : "snowNight",
-//        "50d" : "mistDay",
-//        "50n" : "mistNight"
-//    ]
-//}

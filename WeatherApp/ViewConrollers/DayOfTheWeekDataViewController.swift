@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import SpriteKit
 
 
 class DayOfTheWeekDataViewController: UIViewController {
     
-    @IBOutlet weak var screenView: UIImageView!
+    @IBOutlet weak var sceneView: SKView!
     @IBOutlet weak var tableView: UITableView!
     
     let iconDic = IconModel()
@@ -37,10 +38,8 @@ class DayOfTheWeekDataViewController: UIViewController {
         let iconName = iconName
         for icon in iconDic.iconsDictionary {
             if icon.key == iconName {
-                let nameImage = UIImage(named: icon.value)
-                screenView.image = nameImage
-                screenView.frame = CGRect.init(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-                screenView.contentMode = .scaleAspectFill
+                let sceneName = SKScene(fileNamed: icon.value)
+                sceneView.presentScene(sceneName)
             }
         }
     }
@@ -53,6 +52,7 @@ class DayOfTheWeekDataViewController: UIViewController {
     @IBAction func goBackToMainScreen(_ sender: Any) {
         
     }
+    
     func setupModelDay(dateName: String, tempDay: String, tempNight: String, icon: UIImage, descriptionWeather: String, feelsLike: String, indexUv: String, windSpeed: String, humidity: String) {
         dateNameLabel = dateName
         temperatureDayLabel = tempDay

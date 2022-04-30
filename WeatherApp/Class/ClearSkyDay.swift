@@ -25,7 +25,7 @@ class ClearSkyDay: SKScene {
     }
     
     private func configBackground() {
-        backgroundColor = UIColor(red: 85/255, green: 72/255, blue: 232/255, alpha: 1)
+        backgroundColor = UIColor(red: 42/255, green: 23/255, blue: 255/255, alpha: 1)
     }
     
     private func createMoon() {

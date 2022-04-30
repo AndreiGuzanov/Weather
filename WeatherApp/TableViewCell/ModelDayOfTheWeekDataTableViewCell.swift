@@ -134,7 +134,7 @@ class ModelDayOfTheWeekDataTableViewCell: UITableViewCell {
         containerView.addSubview(dateNameLabel)
         dateNameLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().inset(100)
+            make.top.equalToSuperview().inset(50)
         }
     }
     

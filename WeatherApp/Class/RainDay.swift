@@ -11,12 +11,14 @@ import GameplayKit
 
 class RainDay: SKScene {
     
-    private lazy var clouds = SKEmitterNode()
+    private lazy var whiteClouds = SKEmitterNode()
+    private lazy var blackClouds = SKEmitterNode()
     private lazy var rain = SKEmitterNode()
     
     override func sceneDidLoad() {
         configBackground()
-        createClouds()
+        createWhiteClouds()
+        createBlackClouds()
         createRain()
     }
     
@@ -24,14 +26,24 @@ class RainDay: SKScene {
         backgroundColor = UIColor(red: 112/255, green: 112/255, blue: 112/255, alpha: 1)
     }
     
-    private func createClouds() {
-        clouds = SKEmitterNode(fileNamed: "Сlouds.sks") ?? SKEmitterNode()
-        clouds.zPosition = 1
-        clouds.particleSize = CGSize(width: frame.width,
-                                     height: 150)
-        clouds.particlePosition = CGPoint(x: UIScreen.main.bounds.width / 2,
-                                          y: UIScreen.main.bounds.height - clouds.frame.size.height)
-        addChild(clouds)
+    private func createWhiteClouds() {
+        whiteClouds = SKEmitterNode(fileNamed: "WhiteClouds.sks") ?? SKEmitterNode()
+        whiteClouds.zPosition = 1
+        whiteClouds.particleSize = CGSize(width: 150,
+                                          height: 100)
+        whiteClouds.particlePosition = CGPoint(x: UIScreen.main.bounds.width + whiteClouds.frame.width,
+                                               y: UIScreen.main.bounds.height - whiteClouds.frame.size.height)
+        addChild(whiteClouds)
+    }
+    
+    private func createBlackClouds() {
+        blackClouds = SKEmitterNode(fileNamed: "BlackClouds.sks") ?? SKEmitterNode()
+        blackClouds.zPosition = 2
+        blackClouds.particleSize = CGSize(width: 130,
+                                          height: 80)
+        blackClouds.particlePosition = CGPoint(x: UIScreen.main.bounds.width + blackClouds.frame.width,
+                                               y: UIScreen.main.bounds.height - blackClouds.frame.size.height)
+        addChild(blackClouds)
     }
     
     private func createRain() {

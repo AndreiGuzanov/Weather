@@ -53,7 +53,7 @@ class CloudySkyDay: SKScene {
     private func createSky() {
         skyTexture = SKTexture(imageNamed: "Cloud")
         skySpriteNode = SKSpriteNode(texture: skyTexture)
-        skySpriteNode.size = CGSize(width: 300, height: 200)
+        skySpriteNode.size = CGSize(width: 200, height: 100)
         skySpriteNode.anchorPoint = CGPoint(x: 0, y: 0)
         skySpriteNode.position = CGPoint(x: UIScreen.main.bounds.width,
                                          y: UIScreen.main.bounds.height - skySpriteNode.size.height)
@@ -72,7 +72,7 @@ class CloudySkyDay: SKScene {
     private func createLiteSky() {
         liteSkyTexture = SKTexture(imageNamed: "LiteSky")
         liteSkySpriteNode = SKSpriteNode(texture: liteSkyTexture)
-        liteSkySpriteNode.size = CGSize(width: 300, height: 200)
+        liteSkySpriteNode.size = CGSize(width: 200, height: 100)
         liteSkySpriteNode.anchorPoint = CGPoint(x: 0, y: 0)
         liteSkySpriteNode.position = CGPoint(x: UIScreen.main.bounds.width / 2,
                                              y: UIScreen.main.bounds.height - liteSkySpriteNode.size.height)

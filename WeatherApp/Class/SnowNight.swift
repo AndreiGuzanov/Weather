@@ -29,7 +29,7 @@ class SnowNight: SKScene {
         clouds.zPosition = 1
         clouds.particleSize = CGSize(width: frame.width,
                                      height: 150)
-        clouds.particlePosition = CGPoint(x: UIScreen.main.bounds.width / 2,
+        clouds.particlePosition = CGPoint(x: UIScreen.main.bounds.width + clouds.frame.width,
                                           y: UIScreen.main.bounds.height - clouds.frame.size.height)
         addChild(clouds)
     }

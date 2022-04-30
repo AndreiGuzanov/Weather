@@ -1,23 +1,23 @@
 //
-//  SnowDay.swift
-//  WeatherApp
+//  BrokenClouds.swift
+//  weatherAnimation
 //
-//  Created by Андрей Гузанов on 11.04.2022.
+//  Created by Андрей Гузанов on 20.04.2022.
 //
 
 import SpriteKit
 import GameplayKit
 
 
-class SnowDay: SKScene {
+class BrokenClouds: SKScene {
     
     private lazy var whiteClouds = SKEmitterNode()
-    private lazy var snow = SKEmitterNode()
+    private lazy var blackClouds = SKEmitterNode()
     
     override func sceneDidLoad() {
         configBackground()
         createWhiteClouds()
-        createSnow()
+        createBlackClouds()
     }
     
     private func configBackground() {
@@ -26,7 +26,7 @@ class SnowDay: SKScene {
     
     private func createWhiteClouds() {
         whiteClouds = SKEmitterNode(fileNamed: "WhiteClouds.sks") ?? SKEmitterNode()
-        whiteClouds.zPosition = 1
+        whiteClouds.zPosition = 0
         whiteClouds.particleSize = CGSize(width: 150,
                                           height: 100)
         whiteClouds.particlePosition = CGPoint(x: UIScreen.main.bounds.width + whiteClouds.frame.width,
@@ -34,12 +34,13 @@ class SnowDay: SKScene {
         addChild(whiteClouds)
     }
     
-    private func createSnow() {
-        snow = SKEmitterNode(fileNamed: "Snow.sks") ?? SKEmitterNode()
-        snow.zPosition = 0
-        snow.particlePositionRange = CGVector(dx: 1000, dy: 2000)
-        snow.particlePosition = CGPoint(x: UIScreen.main.bounds.width / 2,
-                                        y: UIScreen.main.bounds.height - snow.frame.size.height)
-        addChild(snow)
+    private func createBlackClouds() {
+        blackClouds = SKEmitterNode(fileNamed: "BlackClouds.sks") ?? SKEmitterNode()
+        blackClouds.zPosition = 1
+        blackClouds.particleSize = CGSize(width: 130,
+                                          height: 80)
+        blackClouds.particlePosition = CGPoint(x: UIScreen.main.bounds.width + blackClouds.frame.width,
+                                               y: UIScreen.main.bounds.height - blackClouds.frame.size.height)
+        addChild(blackClouds)
     }
 }

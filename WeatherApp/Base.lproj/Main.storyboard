@@ -83,7 +83,7 @@
                     <navigationItem key="navigationItem" id="GOW-LA-Q1u">
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ThF-hf-muV">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mD0-mq-D07">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mD0-mq-D07">
                                 <rect key="frame" x="347.5" y="1.5" width="46.5" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,9 +148,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-8o-Xfu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkL-rE-TFp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </skView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6LG-gt-Pj1">
                                 <rect key="frame" x="0.0" y="64" width="414" height="798"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,13 +160,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="QuE-8o-Xfu" secondAttribute="trailing" id="4g0-ka-iw8"/>
+                            <constraint firstItem="mkL-rE-TFp" firstAttribute="leading" secondItem="IPo-r5-axq" secondAttribute="leading" id="17h-eP-plt"/>
+                            <constraint firstItem="IPo-r5-axq" firstAttribute="bottom" secondItem="mkL-rE-TFp" secondAttribute="bottom" id="9GV-GR-LJg"/>
                             <constraint firstItem="6LG-gt-Pj1" firstAttribute="leading" secondItem="IPo-r5-axq" secondAttribute="leading" id="JIv-06-hLB"/>
                             <constraint firstItem="6LG-gt-Pj1" firstAttribute="top" secondItem="IPo-r5-axq" secondAttribute="top" constant="20" id="On2-pQ-2l2"/>
-                            <constraint firstAttribute="bottom" secondItem="QuE-8o-Xfu" secondAttribute="bottom" id="ZPF-Gh-oIe"/>
-                            <constraint firstItem="QuE-8o-Xfu" firstAttribute="leading" secondItem="IPo-r5-axq" secondAttribute="leading" id="ecV-cV-ko9"/>
+                            <constraint firstItem="mkL-rE-TFp" firstAttribute="top" secondItem="12V-BC-0hx" secondAttribute="top" id="SuJ-jD-Del"/>
+                            <constraint firstItem="IPo-r5-axq" firstAttribute="trailing" secondItem="mkL-rE-TFp" secondAttribute="trailing" id="Vgf-ki-w1q"/>
                             <constraint firstItem="IPo-r5-axq" firstAttribute="bottom" secondItem="6LG-gt-Pj1" secondAttribute="bottom" id="iBV-Wp-J5m"/>
-                            <constraint firstItem="QuE-8o-Xfu" firstAttribute="top" secondItem="12V-BC-0hx" secondAttribute="top" id="rQT-6y-8i1"/>
                             <constraint firstItem="IPo-r5-axq" firstAttribute="trailing" secondItem="6LG-gt-Pj1" secondAttribute="trailing" id="rxn-vD-Y3s"/>
                         </constraints>
                         <connections>
@@ -174,7 +174,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="screenView" destination="QuE-8o-Xfu" id="w0E-iB-B0B"/>
+                        <outlet property="sceneView" destination="mkL-rE-TFp" id="adS-8R-nYH"/>
                         <outlet property="tableView" destination="6LG-gt-Pj1" id="CI8-X1-efE"/>
                     </connections>
                 </viewController>

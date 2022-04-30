@@ -36,9 +36,9 @@ class MainViewController: UIViewController, CLLocationManagerDelegate  {
     
     func backgroundSceneViewController() {
         let iconName = model?.current.weather.first?.icon
-        for scene in iconDic.iconsDictionary {
-            if scene.key == iconName {
-                let sceneName = SKScene(fileNamed: scene.value)
+        for icon in iconDic.iconsDictionary {
+            if icon.key == iconName {
+                let sceneName = SKScene(fileNamed: icon.value)
                 sceneView.presentScene(sceneName)
             }
         }
