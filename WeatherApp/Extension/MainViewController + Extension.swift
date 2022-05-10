@@ -13,7 +13,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - DataSourceTableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        if ((model?.current.weather.isEmpty) != nil) {
+            return 3
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,12 +35,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if ((model?.current.weather.isEmpty) != nil) {
+            backgroundSceneViewController()
             switch indexPath.section {
             case 0:
                 switch indexPath.row {
                 case 0:
-                    backgroundSceneViewController()
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentWeatherTableViewCell.identifierCurrentWeatherTableViewCel, for: indexPath) as? CurrentWeatherTableViewCell else { return UITableViewCell() }
                     cell.backgroundColor = .clear
                     cell.cityName.text = city()
@@ -85,9 +88,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             default:
                 break
             }
-        } else {
-            return UITableViewCell()
-        }
         return UITableViewCell()
     }
     
