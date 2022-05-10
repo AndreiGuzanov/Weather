@@ -35,59 +35,59 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            backgroundSceneViewController()
-            switch indexPath.section {
+        backgroundSceneViewController()
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
             case 0:
-                switch indexPath.row {
-                case 0:
-                    guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentWeatherTableViewCell.identifierCurrentWeatherTableViewCel, for: indexPath) as? CurrentWeatherTableViewCell else { return UITableViewCell() }
-                    cell.backgroundColor = .clear
-                    cell.cityName.text = city()
-                    cell.temperatureLabel.text = currentTemp()
-                    cell.descriptionWeather.text = currentDescript()
-                    return cell
-                case 1:
-                    guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherForTheWholeDayTableViewCell.identifierWeatherForTheWholeDayTableViewCell, for: indexPath) as? WeatherForTheWholeDayTableViewCell else { return UITableViewCell() }
-                    cell.locationCity(searchSity: city())
-                    return cell
-                default:
-                    break
-                }
-            case 1:
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherForTheWeekTableViewCell.identifierWeatherForTheWeekTableViewCell, for: indexPath) as? WeatherForTheWeekTableViewCell else { return UITableViewCell() }
-                cell.accessoryType = .detailDisclosureButton
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentWeatherTableViewCell.identifierCurrentWeatherTableViewCel, for: indexPath) as? CurrentWeatherTableViewCell else { return UITableViewCell() }
                 cell.backgroundColor = .clear
-                cell.dayOfTheWeekLabel.text = dailyDateFormater(indexPath: indexPath)
-                cell.temperatureNightLabel.text = dailyTempNight(indexPath: indexPath)
-                cell.temperatureDayLabel.text = dailyTempDay(indexPath: indexPath)
-                cell.iconWeather.image = dailyIcon(indexPath: indexPath) ?? UIImage()
+                cell.cityName.text = city()
+                cell.temperatureLabel.text = currentTemp()
+                cell.descriptionWeather.text = currentDescript()
                 return cell
-            case 2:
-                switch indexPath.row {
-                case 0:
-                    guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentWeatherParametersTableViewCell.identifierCurrentWeatherParameters, for: indexPath) as? CurrentWeatherParametersTableViewCell else { return UITableViewCell() }
-                    cell.backgroundColor = .clear
-                    cell.parameterName.text = currentParameterName()
-                    cell.iconWeather.image = currentHumidityIcon() ?? UIImage()
-                    cell.parameterValue.text = currentHumidity()
-                    cell.firstLabel.text = currentFeelsLike()
-                    cell.secondLabel.text = currentIndexUvi()
-                    return cell
-                case 1:
-                    guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentWeatherParametersTableViewCell.identifierCurrentWeatherParameters, for: indexPath) as? CurrentWeatherParametersTableViewCell else { return UITableViewCell() }
-                    cell.backgroundColor = .clear
-                    cell.parameterName.text = currentWind()
-                    cell.iconWeather.image = currentWindIcon() ?? UIImage()
-                    cell.parameterValue.text = currentWindSpeed()
-                    cell.firstLabel.text = currentWindDirection()
-                    cell.secondLabel.text = currentWindGust()
-                    return cell
-                default:
-                    break
-                }
+            case 1:
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherForTheWholeDayTableViewCell.identifierWeatherForTheWholeDayTableViewCell, for: indexPath) as? WeatherForTheWholeDayTableViewCell else { return UITableViewCell() }
+                cell.locationCity(searchSity: city())
+                return cell
             default:
                 break
             }
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherForTheWeekTableViewCell.identifierWeatherForTheWeekTableViewCell, for: indexPath) as? WeatherForTheWeekTableViewCell else { return UITableViewCell() }
+            cell.accessoryType = .detailDisclosureButton
+            cell.backgroundColor = .clear
+            cell.dayOfTheWeekLabel.text = dailyDateFormater(indexPath: indexPath)
+            cell.temperatureNightLabel.text = dailyTempNight(indexPath: indexPath)
+            cell.temperatureDayLabel.text = dailyTempDay(indexPath: indexPath)
+            cell.iconWeather.image = dailyIcon(indexPath: indexPath) ?? UIImage()
+            return cell
+        case 2:
+            switch indexPath.row {
+            case 0:
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentWeatherParametersTableViewCell.identifierCurrentWeatherParameters, for: indexPath) as? CurrentWeatherParametersTableViewCell else { return UITableViewCell() }
+                cell.backgroundColor = .clear
+                cell.parameterName.text = currentParameterName()
+                cell.iconWeather.image = currentHumidityIcon() ?? UIImage()
+                cell.parameterValue.text = currentHumidity()
+                cell.firstLabel.text = currentFeelsLike()
+                cell.secondLabel.text = currentIndexUvi()
+                return cell
+            case 1:
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentWeatherParametersTableViewCell.identifierCurrentWeatherParameters, for: indexPath) as? CurrentWeatherParametersTableViewCell else { return UITableViewCell() }
+                cell.backgroundColor = .clear
+                cell.parameterName.text = currentWind()
+                cell.iconWeather.image = currentWindIcon() ?? UIImage()
+                cell.parameterValue.text = currentWindSpeed()
+                cell.firstLabel.text = currentWindDirection()
+                cell.secondLabel.text = currentWindGust()
+                return cell
+            default:
+                break
+            }
+        default:
+            break
+        }
         return UITableViewCell()
     }
     
